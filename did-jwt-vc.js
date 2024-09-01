@@ -5,7 +5,7 @@ import fetch from 'node-fetch';
 
 const customResolver = {
   web: async (did) => {
-    const url = `https://soonding.github.io/client_did.json`; 
+    const url = `https://wooyoungson.github.io/client_did.json`; 
     const response = await fetch(url);
     if (response.ok) {
       const didDocument = await response.json();
@@ -21,10 +21,10 @@ const customResolver = {
 };
 
 async function run() {
-  const key = '62f5955a35f1b0918314d25af571120f5f32e760ca00256f63a16d6dacc558a7';
+  const key = '2a046b1bae26d55ae22571fb29f934d807627fbbcc38d0bd27847f0f840698c7';
   const signer = ES256KSigner(hexToBytes(key));
 
-  const clientDid = 'did:web:soonding.github.io:client_did';
+  const clientDid = 'did:web:WooyoungSon.github.io:client';
 
 
   const issuer = {
